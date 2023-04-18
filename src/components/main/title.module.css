@@ -1,0 +1,130 @@
+@font-face {
+  font-family: fatFont;
+  src: url("../../../fatfonts.woff");
+}
+.background {
+  background-image: url("../../images/blue_line.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-bottom: 135px;
+}
+
+.apps {
+  position: relative;
+}
+.apps .icon_apple {
+  background-color: #2D3240;
+  border-radius: 50%;
+  padding: 13px 13px;
+  width: 55px;
+  height: 55px;
+  transition: all 0.1s ease-in-out;
+}
+.apps .icon_apple:hover {
+  background-color: #101219;
+  transform: scale(1.1);
+}
+.apps .icon_android {
+  position: absolute;
+  left: 44px;
+  width: 55px;
+  height: 55px;
+  background-color: #2D3240;
+  border-radius: 50%;
+  padding: 13px 13px;
+  border: 1px solid #E1E3E9;
+  transition: all 0.1s ease-in-out;
+}
+.apps .icon_android:hover {
+  background-color: #101219;
+  transform: scale(1.1);
+}
+
+.text_under_apps {
+  margin-top: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.main_content {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.main_content .main_apps_block {
+  position: absolute;
+  top: -15px;
+  left: 8px;
+}
+.main_content .title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 97px;
+  text-transform: uppercase;
+  color: #000000;
+  max-width: 503px;
+  width: 100%;
+  align-self: flex-end;
+}
+.main_content .decoratedWord {
+  display: inline-block;
+  background: #BAFD37;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  transform: rotate(10.48deg);
+  position: relative;
+  padding: 5px;
+}
+.main_content .decoratedWord::after {
+  content: "*";
+  position: absolute;
+  top: -16px;
+  right: -25px;
+}
+
+.main_contentAnimation {
+  animation-duration: 1s;
+  animation-name: showingElent;
+}
+
+@keyframes showingElent {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 741px) {
+  .main_content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_content .title {
+    align-self: center;
+    margin-top: 80px;
+    font-size: 65px;
+    line-height: 70px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .background {
+    margin-bottom: 80px;
+  }
+  .main_content .title {
+    margin-top: 102px;
+    font-size: 50px;
+    line-height: 50px;
+  }
+}/*# sourceMappingURL=title.module.css.map */

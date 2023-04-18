@@ -1,0 +1,170 @@
+.header{
+    padding: 25px 8px 0 8px;
+    margin-bottom: 55px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logotype{
+        font-family: 'Jomhuria', cursive;
+        font-size: 110px;
+        line-height: 80px;
+        color: #2E3341;
+        text-transform: uppercase;
+    }
+
+    .list__buyBtn{
+        display: flex;
+        align-items: center;
+        .list_menu{
+            display: flex;
+            gap: 80px;
+            .item_link{
+                display: inline-block;
+                position: relative;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #000;
+                margin-right: 30px;
+                text-decoration: none;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #F54329;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+    
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+
+        .buyBtn{
+            font-family: 'Oswald';
+            font-weight: 700;
+            font-size: 34px;
+            text-transform: uppercase;
+            line-height: 50px;
+            color: #fff;
+            width: 106px;
+            height: 106px;
+            background: #F54329;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            border: none;
+            transform: rotate(19.5deg);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-left: 90px;
+
+            &:hover{
+                transform: rotate(35.5deg) scale(1.1);
+                background-color: #f53a1d;
+            }
+        }
+    }
+}
+
+.mobile_btn{
+    display: none;
+}
+@media only screen and (max-width: 980px){
+
+    .mobile_btn{
+        display: block;
+        position: absolute;
+        right: 35px;
+        top: 55px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .navigation{
+
+        .list__buyBtn{
+            .buyBtn{
+                margin-left: 0;
+                margin-right:100px;
+            }
+            .list_menu{
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 100%;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                background-color: #F54329;
+                transition: left 1s;
+                z-index: 10;
+
+                .item_link{
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 36px;
+
+                    &::after {
+                        bottom: -7px;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .active{
+        left: 0 !important;
+    }
+} 
+
+
+@media only screen and (max-width: 550px){
+    .mobile_btn{
+        top: 47px;
+    }
+    .navigation{
+
+        .logotype{
+            font-size:80px ;
+        }
+        .list__buyBtn{
+
+            .buyBtn{
+                font-size: 20px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .navigation{
+
+        .logotype{
+            font-size:50px ;
+        }
+    }
+}

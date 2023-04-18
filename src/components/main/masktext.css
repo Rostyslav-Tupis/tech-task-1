@@ -1,0 +1,39 @@
+@font-face {
+  font-family: fatfont;
+  src: url("../../../fatfonts.woff");
+}
+.text_mask {
+  max-width: 476px;
+}
+.text_mask .text {
+  font-family: fatfont;
+  font-size: 365px;
+  background-image: url("../../images/girl.png");
+  background-size: contain;
+  -webkit-background-clip: text;
+          background-clip: text;
+  --webkit-background-clip:text;
+  color: transparent;
+  word-wrap: break-word;
+  line-height: 237px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 999px) {
+  .text_mask {
+    max-width: 388px;
+  }
+  .text_mask .text {
+    font-size: 296px;
+    line-height: 197px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .text_mask {
+    max-width: 295px;
+  }
+  .text_mask .text {
+    font-size: 220px;
+    line-height: 147px;
+  }
+}/*# sourceMappingURL=masktext.css.map */
